@@ -1,7 +1,11 @@
 import React from "react";
-
+import { Bars3Icon } from "@heroicons/react/24/solid";
 const Header = () => {
-	return <div>hello</div>;
+	return (
+		<header>
+			<div>hello</div>
+		</header>
+	);
 };
 
 export default Header;
