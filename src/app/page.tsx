@@ -36,7 +36,7 @@ export default async function Home() {
             <CardContent className=" mt-5 ">
               <h1 className=" line-clamp-3 text-lg font-bold ">{post.title}</h1>
               <p className=" line-clamp-2 text-sm mt-2 text-gray-600 dark:text-gray-300 ">{post.smallDescription}</p>
-              <Button asChild className=" w-full mt-7 ">
+              <Button asChild className=" w-full mt-7 text-black dark:text-white">
                 <Link href={`/blog/${post.currentSlug}`}>Read Me</Link>
               </Button>
             </CardContent>
