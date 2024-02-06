@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { ThemeProvider } from "./components/theme-provider";
+import Navbar from "./components/Navbar";
 // import Header from "./Header";
 
 export const metadata = {
@@ -22,7 +23,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar/>
+         <main className=" max-w-2xl mx-auto px-5 ">{children}</main> 
         </ThemeProvider>
       </body>
     </html>
