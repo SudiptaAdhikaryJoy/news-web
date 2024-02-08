@@ -8,6 +8,6 @@ export interface simpleCard {
 export interface fullBlog {
   currentSlug: string;
   title: string;
-  content: string | number | boolean;
+  content: any;
   titleImage: string | number | boolean;
 }
