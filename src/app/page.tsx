@@ -29,14 +29,19 @@ export default async function Home() {
             <Image
               src={urlFor(post.titleImage).url()}
               alt=""
-              width={500}
-              height={500}
+              width={600}
+              height={600}
               className=" rounded-t-lg h-[200px] object-cover "
             />
             <CardContent className=" mt-5 ">
               <h1 className=" line-clamp-3 text-lg font-bold ">{post.title}</h1>
-              <p className=" line-clamp-2 text-sm mt-2 text-gray-600 dark:text-gray-300 ">{post.smallDescription}</p>
-              <Button asChild className=" w-full mt-7 text-black dark:text-white">
+              <p className=" line-clamp-2 text-sm mt-2 text-gray-600 dark:text-gray-300 ">
+                {post.smallDescription}
+              </p>
+              <Button
+                asChild
+                className=" w-full mt-7 text-black dark:text-white"
+              >
                 <Link href={`/blog/${post.currentSlug}`}>Read Me</Link>
               </Button>
             </CardContent>
