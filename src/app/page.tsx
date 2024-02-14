@@ -35,7 +35,7 @@ export default async function Home() {
             />
             <CardContent className=" mt-5 ">
               <h1 className=" line-clamp-3 text-lg font-bold ">{post.title}</h1>
-              <p className=" line-clamp-3 text-sm mt-2 text-gray-600 dark:text-gray-300 ">
+              <p className=" line-clamp-2 text-sm mt-2 text-gray-600 dark:text-gray-300 ">
                 {post.smallDescription}
               </p>
               <Button
