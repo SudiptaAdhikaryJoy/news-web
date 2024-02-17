@@ -42,7 +42,7 @@ export default async function Home() {
                 asChild
                 className=" w-full mt-7 text-black dark:text-white"
               >
-                <Link href={`/blog/${post.currentSlug}`}>Read Me</Link>
+                <Link href={`/blog/${post.currentSlug}`}>Read Me!</Link>
               </Button>
             </CardContent>
           </Card>
