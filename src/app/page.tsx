@@ -4,6 +4,7 @@ import { client, urlFor } from "./lib/sanity";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { BackgroundGradient } from "@/components/ui/backgroundGradient";
 
 async function getData() {
   const query = `
@@ -23,28 +24,32 @@ export default async function Home() {
   console.log(data);
   return (
     <>
-      <div className=" grid grid-cols-1 md:grid-cols-2 mt-5 gap-5 ">
+      <div className=" grid grid-cols-1 md:grid-cols-2 mt-6 gap-5 ">
         {data.map((post, index) => (
           <Card key={index}>
-            <Image
-              src={urlFor(post.titleImage).url()}
-              alt=""
-              width={600}
-              height={600}
-              className=" rounded-t-lg h-[200px] object-cover "
-            />
-            <CardContent className=" mt-5 ">
-              <h1 className=" line-clamp-3 text-lg font-bold ">{post.title}</h1>
-              <p className=" line-clamp-2 text-sm mt-2 text-gray-600 dark:text-gray-300 ">
-                {post.smallDescription}
-              </p>
-              <Button
-                asChild
-                className=" w-full mt-7 text-black dark:text-white"
-              >
-                <Link href={`/blog/${post.currentSlug}`}>Read Me!</Link>
-              </Button>
-            </CardContent>
+            <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
+              <Image
+                src={urlFor(post.titleImage).url()}
+                alt=""
+                width={600}
+                height={600}
+                className=" rounded-t-lg h-[200px] object-cover "
+              />
+              <CardContent className=" mt-5 ">
+                <h1 className=" line-clamp-3 text-lg font-bold ">
+                  {post.title}
+                </h1>
+                <p className=" line-clamp-2 text-sm mt-2 text-gray-600 dark:text-gray-300 ">
+                  {post.smallDescription}
+                </p>
+                <Button
+                  asChild
+                  className=" w-full mt-7 text-black dark:text-white"
+                >
+                  <Link href={`/blog/${post.currentSlug}`}>Read Me</Link>
+                </Button>
+              </CardContent>
+            </BackgroundGradient>
           </Card>
         ))}
       </div>
